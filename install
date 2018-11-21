@@ -1,0 +1,6 @@
+git clone https://github.com/liuju1234/vim-config.git
+cd vim-config
+git submodule update --init --recursive
+
+ln -s `pwd`/.vim ~/.vim
+
