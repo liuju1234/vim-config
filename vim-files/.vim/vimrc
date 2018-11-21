@@ -1,0 +1,99 @@
+
+" 取消备份
+set nobackup
+set noswapfile
+" 文件编码
+set encoding=utf-8
+
+" 显示行号
+set number
+
+" 取消换行
+set nowrap
+
+" 显示光标当前位置
+set ruler
+
+" 设置缩进
+set smartindent "自动缩进
+set autoindent "智能缩进
+set cindent "C缩进
+set tabstop=4 "硬TAB
+set softtabstop=4 "软TAB
+set shiftwidth=4 "缩进空格数
+set expandtab "空格替换TAB
+
+" 突出显示当前行
+set cursorline
+
+" 查找
+set ic
+set hls
+set is
+
+" 左下角显示当前 vim 模式
+set showmode
+
+" 代码折叠
+" 启动 vim 时关闭折叠代码
+"set nofoldenable
+
+"set verbose=9
+
+" 打开filetype
+filetype on
+
+" 启用插件管理
+execute pathogen#infect()
+
+" 主题
+syntax enable
+set background=dark
+"colorscheme solarized
+colorscheme delek
+
+" About NERDTree  
+map <C-n> :NERDTreeToggle<CR>
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+let NERDTreeShowHidden=1
+
+let g:NERDTreeShowIgnoredStatus = 1
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+
+nmap <F2> :NERDTreeTabsFind<CR>
+
+nmap <F3> ::NERDTreeFocusToggle<CR>
+
+" TagBar 自动生成参数和方法  
+" Then the F8 key will toggle the Tagbar window.  
+nmap <F8> :TagbarToggle<CR>
+
+"syntastic 保存检查代码时候传入参数  
+"let g:syntastic_java_javac_args="-cp ../../lib:../../bin -sourcepath ../../bin -Djava.ext.dirs=../../lib -d ../../bin"
+
+" 关于Java自动文件补全插件  
+" autocmd FileType java set omnifunc=javacomplete#Complete
+" autocmd FileType java set completefunc=javacomplete#CompleteParamsInf
+
+
+" 在VIM编辑java文件时当敲入 . 时会出发
+" autocmd FileType java,javascript,jsp inoremap . .
+

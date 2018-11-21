@@ -1,0 +1,48 @@
+# compile vim
+git clone https://github.com/vim/vim.git
+cd vim
+git checkout -b 7.4.2367 v7.4.2367
+./configure --prefix=<HOME>/program/vim --enable-pythoninterp=dynamic --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/
+make
+make install
+cd -
+
+# clone my vim config
+git clone https://github.com/liuju1234/vim-config.git
+cd vim-config
+
+# create this file
+#touch install-commands
+
+# create basic directory and files
+mkdir vim-files
+cd vim-files/
+mkdir .vim
+touch .vim/vimrc
+
+# install pathogen (a plugin manager)
+mkdir -p .vim/autoload .vim/bundle
+curl -LSso .vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+echo 'execute pathogen#infect()' >>.vim/vimrc
+
+# make some base config and install
+ln -s `pwd`/.vim ~/.vim
+
+# install other plugin
+git submodule add https://github.com/scrooloose/nerdtree.git .vim/bundle/nerdtree
+git submodule add https://github.com/Xuyuanp/nerdtree-git-plugin.git .vim/bundle/nerdtree-git-plugin
+git submodule add https://github.com/jistr/vim-nerdtree-tabs.git .vim/bundle/nerdtree-tabs-plugin
+git submodule add https://github.com/majutsushi/tagbar.git .vim/bundle/tagbar
+git submodule add https://github.com/SirVer/ultisnips.git .vim/bundle/ultisnips
+git submodule add https://tpope.io/vim/commentary.git .vim/bundle/commentary
+git submodule add https://github.com/vim-syntastic/syntastic.git .vim/bundle/syntastic
+git submodule add https://github.com/Raimondi/delimitMate.git .vim/bundle/delimitMate
+git submodule add https://github.com/vim-scripts/bufexplorer.zip.git .vim/bundle/bufexplorer.zip
+git submodule add https://github.com/magic-dot-files/TagHighlight.git .vim/bundle/TagHighlight
+git submodule add https://github.com/Lokaltog/vim-powerline.git .vim/bundle/vim-powerline
+git submodule add https://github.com/vim-scripts/javacomplete.git .vim/bundle/javacomplete
+
+git submodule add https://github.com/flazz/vim-colorschemes.git  .vim/bundle/vim-colorschemes
+
+
+
