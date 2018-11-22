@@ -10,9 +10,6 @@
 [submodule "vim-files/.vim/bundle/ultisnips"]
 	path = vim-files/.vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
-[submodule "vim-files/.vim/bundle/commentary"]
-	path = vim-files/.vim/bundle/commentary
-	url = https://tpope.io/vim/commentary.git
 [submodule "vim-files/.vim/bundle/syntastic"]
 	path = vim-files/.vim/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git

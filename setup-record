@@ -34,7 +34,8 @@ git submodule add https://github.com/Xuyuanp/nerdtree-git-plugin.git .vim/bundle
 git submodule add https://github.com/jistr/vim-nerdtree-tabs.git .vim/bundle/nerdtree-tabs-plugin
 git submodule add https://github.com/majutsushi/tagbar.git .vim/bundle/tagbar
 git submodule add https://github.com/SirVer/ultisnips.git .vim/bundle/ultisnips
-git submodule add https://tpope.io/vim/commentary.git .vim/bundle/commentary
+#git submodule add https://tpope.io/vim/commentary.git .vim/bundle/commentary
+git submodule add https://github.com/tpope/vim-commentary.git .vim/bundle/commentary
 git submodule add https://github.com/vim-syntastic/syntastic.git .vim/bundle/syntastic
 git submodule add https://github.com/Raimondi/delimitMate.git .vim/bundle/delimitMate
 git submodule add https://github.com/vim-scripts/bufexplorer.zip.git .vim/bundle/bufexplorer.zip

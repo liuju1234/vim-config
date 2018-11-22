@@ -1,6 +1,11 @@
 git clone https://github.com/liuju1234/vim-config.git
 cd vim-config
 git submodule update --init --recursive
+# after this if do some update use 'git submodule update --remote --rebase'
+
+# install ctgs Exuberant Ctags 5.5 or Universal Ctags
+# on ubuntu 'apt-get install exuberant-ctags'
+# on mac os, first install homebrew, and then 'brew install ctags'
 
 ln -s `pwd`/.vim ~/.vim
 
