@@ -86,13 +86,20 @@ nmap <F3> ::NERDTreeFocusToggle<CR>
 " Then the F8 key will toggle the Tagbar window.  
 nmap <F8> :TagbarToggle<CR>
 
+"" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 "syntastic 保存检查代码时候传入参数  
-"let g:syntastic_java_javac_args="-cp ../../lib:../../bin -sourcepath ../../bin -Djava.ext.dirs=../../lib -d ../../bin"
+"let g:syntastic_java_javac_options="-cp ../../lib:../../bin -sourcepath ../../bin -Djava.ext.dirs=../../lib -d ../../bin"
 
 " 关于Java自动文件补全插件  
-" autocmd FileType java set omnifunc=javacomplete#Complete
-" autocmd FileType java set completefunc=javacomplete#CompleteParamsInf
-
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
 
 " 在VIM编辑java文件时当敲入 . 时会出发
 " autocmd FileType java,javascript,jsp inoremap . .
