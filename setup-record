@@ -29,21 +29,20 @@ echo 'execute pathogen#infect()' >>.vim/vimrc
 ln -s `pwd`/.vim ~/.vim
 
 # install other plugin
-git submodule add https://github.com/scrooloose/nerdtree.git .vim/bundle/nerdtree
-git submodule add https://github.com/Xuyuanp/nerdtree-git-plugin.git .vim/bundle/nerdtree-git-plugin
-git submodule add https://github.com/jistr/vim-nerdtree-tabs.git .vim/bundle/nerdtree-tabs-plugin
-git submodule add https://github.com/majutsushi/tagbar.git .vim/bundle/tagbar
-git submodule add https://github.com/SirVer/ultisnips.git .vim/bundle/ultisnips
-#git submodule add https://tpope.io/vim/commentary.git .vim/bundle/commentary
-git submodule add https://github.com/tpope/vim-commentary.git .vim/bundle/commentary
-git submodule add https://github.com/vim-syntastic/syntastic.git .vim/bundle/syntastic
-git submodule add https://github.com/Raimondi/delimitMate.git .vim/bundle/delimitMate
-git submodule add https://github.com/vim-scripts/bufexplorer.zip.git .vim/bundle/bufexplorer.zip
-git submodule add https://github.com/magic-dot-files/TagHighlight.git .vim/bundle/TagHighlight
-git submodule add https://github.com/Lokaltog/vim-powerline.git .vim/bundle/vim-powerline
-git submodule add https://github.com/vim-scripts/javacomplete.git .vim/bundle/javacomplete
+git submodule add --name nerdtree https://github.com/scrooloose/nerdtree.git .vim/bundle/nerdtree
+git submodule add --name nerdtree-git-plugin https://github.com/Xuyuanp/nerdtree-git-plugin.git .vim/bundle/nerdtree-git-plugin
+git submodule add --name nerdtree-tabs-plugin https://github.com/jistr/vim-nerdtree-tabs.git .vim/bundle/nerdtree-tabs-plugin
+git submodule add --name tagbar https://github.com/majutsushi/tagbar.git .vim/bundle/tagbar
+git submodule add --name ultisnips https://github.com/SirVer/ultisnips.git .vim/bundle/ultisnips
+git submodule add --name commentary https://github.com/tpope/vim-commentary.git .vim/bundle/commentary
+git submodule add --name syntastic https://github.com/vim-syntastic/syntastic.git .vim/bundle/syntastic
+git submodule add --name delimitMate https://github.com/Raimondi/delimitMate.git .vim/bundle/delimitMate
+git submodule add --name bufexplorer https://github.com/vim-scripts/bufexplorer.zip.git .vim/bundle/bufexplorer.zip
+git submodule add --name TagHighlight https://github.com/magic-dot-files/TagHighlight.git .vim/bundle/TagHighlight
+git submodule add --name vim-powerline https://github.com/Lokaltog/vim-powerline.git .vim/bundle/vim-powerline
+git submodule add --name javacomplete https://github.com/vim-scripts/javacomplete.git .vim/bundle/javacomplete
 
-git submodule add https://github.com/flazz/vim-colorschemes.git  .vim/bundle/vim-colorschemes
+git submodule add --name vim-colorschemes https://github.com/flazz/vim-colorschemes.git  .vim/bundle/vim-colorschemes
 
 
 

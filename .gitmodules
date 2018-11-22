@@ -1,33 +1,40 @@
-[submodule "vim-files/.vim/bundle/nerdtree"]
+
+[submodule "nerdtree"]
 	path = vim-files/.vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim-files/.vim/bundle/nerdtree-git-plugin"]
+[submodule "nerdtree-git-plugin"]
 	path = vim-files/.vim/bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
-[submodule "vim-files/.vim/bundle/tagbar"]
-	path = vim-files/.vim/bundle/tagbar
-	url = https://github.com/majutsushi/tagbar.git
-[submodule "vim-files/.vim/bundle/ultisnips"]
-	path = vim-files/.vim/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips
-[submodule "vim-files/.vim/bundle/syntastic"]
-	path = vim-files/.vim/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "vim-files/.vim/bundle/bufexplorer.zip"]
-	path = vim-files/.vim/bundle/bufexplorer.zip
-	url = https://github.com/vim-scripts/bufexplorer.zip.git
-[submodule "vim-files/.vim/bundle/TagHighlight"]
-	path = vim-files/.vim/bundle/TagHighlight
-	url = https://github.com/magic-dot-files/TagHighlight.git
-[submodule "vim-files/.vim/bundle/vim-powerline"]
-	path = vim-files/.vim/bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
-[submodule "vim-files/.vim/bundle/javacomplete"]
-	path = vim-files/.vim/bundle/javacomplete
-	url = https://github.com/vim-scripts/javacomplete.git
-[submodule "vim-files/.vim/bundle/nerdtree-tabs-plugin"]
+[submodule "nerdtree-tabs-plugin"]
 	path = vim-files/.vim/bundle/nerdtree-tabs-plugin
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
-[submodule "vim-files/.vim/bundle/vim-colorschemes"]
+[submodule "tagbar"]
+	path = vim-files/.vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "ultisnips"]
+	path = vim-files/.vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "commentary"]
+	path = vim-files/.vim/bundle/commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "syntastic"]
+	path = vim-files/.vim/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "delimitMate"]
+	path = vim-files/.vim/bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "bufexplorer"]
+	path = vim-files/.vim/bundle/bufexplorer.zip
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "TagHighlight"]
+	path = vim-files/.vim/bundle/TagHighlight
+	url = https://github.com/magic-dot-files/TagHighlight.git
+[submodule "vim-powerline"]
+	path = vim-files/.vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "javacomplete"]
+	path = vim-files/.vim/bundle/javacomplete
+	url = https://github.com/vim-scripts/javacomplete.git
+[submodule "vim-colorschemes"]
 	path = vim-files/.vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
