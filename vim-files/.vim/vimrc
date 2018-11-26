@@ -1,4 +1,10 @@
 
+" 启用插件管理
+execute pathogen#infect()
+
+syntax on
+filetype plugin indent on
+
 " 取消备份
 set nobackup
 set noswapfile
@@ -42,9 +48,6 @@ set showmode
 
 " 打开filetype
 filetype on
-
-" 启用插件管理
-execute pathogen#infect()
 
 " 主题
 syntax enable
@@ -97,10 +100,9 @@ let g:UltiSnipsEditSplit="vertical"
 "syntastic 保存检查代码时候传入参数  
 "let g:syntastic_java_javac_options="-cp ../../lib:../../bin -sourcepath ../../bin -Djava.ext.dirs=../../lib -d ../../bin"
 
-" 关于Java自动文件补全插件  
+" 关于Java自动文件补全插件
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
-
-" 在VIM编辑java文件时当敲入 . 时会出发
-" autocmd FileType java,javascript,jsp inoremap . .
+autocmd FileType java inoremap <expr><CR> pumvisible()?"\<C-Y>":"<CR>"
+autocmd FileType java inoremap <buffer> . .<C-X><C-O><C-P>
 

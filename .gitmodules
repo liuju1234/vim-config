@@ -38,3 +38,6 @@
 [submodule "vim-colorschemes"]
 	path = vim-files/.vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "honza-vim-snippets"]
+	path = vim-files/.vim/bundle/honza-vim-snippets
+	url = https://github.com/honza/vim-snippets.git

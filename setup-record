@@ -34,6 +34,7 @@ git submodule add --name nerdtree-git-plugin https://github.com/Xuyuanp/nerdtree
 git submodule add --name nerdtree-tabs-plugin https://github.com/jistr/vim-nerdtree-tabs.git .vim/bundle/nerdtree-tabs-plugin
 git submodule add --name tagbar https://github.com/majutsushi/tagbar.git .vim/bundle/tagbar
 git submodule add --name ultisnips https://github.com/SirVer/ultisnips.git .vim/bundle/ultisnips
+git submodule add --name honza-vim-snippets https://github.com/honza/vim-snippets.git .vim/bundle/honza-vim-snippets
 git submodule add --name commentary https://github.com/tpope/vim-commentary.git .vim/bundle/commentary
 git submodule add --name syntastic https://github.com/vim-syntastic/syntastic.git .vim/bundle/syntastic
 git submodule add --name delimitMate https://github.com/Raimondi/delimitMate.git .vim/bundle/delimitMate
