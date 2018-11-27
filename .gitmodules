@@ -41,3 +41,6 @@
 [submodule "honza-vim-snippets"]
 	path = vim-files/.vim/bundle/honza-vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "luochen1990-rainbow"]
+	path = vim-files/.vim/bundle/luochen1990-rainbow
+	url = https://github.com/luochen1990/rainbow.git

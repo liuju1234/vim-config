@@ -97,6 +97,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+" for luochen1990-rainbow
+let g:rainbow_active=1
+
 "syntastic 保存检查代码时候传入参数  
 "let g:syntastic_java_javac_options="-cp ../../lib:../../bin -sourcepath ../../bin -Djava.ext.dirs=../../lib -d ../../bin"
 

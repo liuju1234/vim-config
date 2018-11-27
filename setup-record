@@ -38,6 +38,7 @@ git submodule add --name honza-vim-snippets https://github.com/honza/vim-snippet
 git submodule add --name commentary https://github.com/tpope/vim-commentary.git .vim/bundle/commentary
 git submodule add --name syntastic https://github.com/vim-syntastic/syntastic.git .vim/bundle/syntastic
 git submodule add --name delimitMate https://github.com/Raimondi/delimitMate.git .vim/bundle/delimitMate
+git submodule add --name luochen1990-rainbow https://github.com/luochen1990/rainbow.git .vim/bundle/luochen1990-rainbow
 git submodule add --name bufexplorer https://github.com/vim-scripts/bufexplorer.zip.git .vim/bundle/bufexplorer.zip
 git submodule add --name TagHighlight https://github.com/magic-dot-files/TagHighlight.git .vim/bundle/TagHighlight
 git submodule add --name vim-powerline https://github.com/Lokaltog/vim-powerline.git .vim/bundle/vim-powerline
