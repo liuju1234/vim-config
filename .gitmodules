@@ -2,45 +2,60 @@
 [submodule "nerdtree"]
 	path = vim-files/.vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+	branch = master
 [submodule "nerdtree-git-plugin"]
 	path = vim-files/.vim/bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+	branch = master
 [submodule "nerdtree-tabs-plugin"]
 	path = vim-files/.vim/bundle/nerdtree-tabs-plugin
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
+	branch = master
 [submodule "tagbar"]
 	path = vim-files/.vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+	branch = master
 [submodule "ultisnips"]
 	path = vim-files/.vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
-[submodule "commentary"]
-	path = vim-files/.vim/bundle/commentary
-	url = https://github.com/tpope/vim-commentary.git
-[submodule "syntastic"]
-	path = vim-files/.vim/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "delimitMate"]
-	path = vim-files/.vim/bundle/delimitMate
-	url = https://github.com/Raimondi/delimitMate.git
-[submodule "bufexplorer"]
-	path = vim-files/.vim/bundle/bufexplorer.zip
-	url = https://github.com/vim-scripts/bufexplorer.zip.git
-[submodule "TagHighlight"]
-	path = vim-files/.vim/bundle/TagHighlight
-	url = https://github.com/magic-dot-files/TagHighlight.git
-[submodule "vim-powerline"]
-	path = vim-files/.vim/bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
-[submodule "javacomplete"]
-	path = vim-files/.vim/bundle/javacomplete
-	url = https://github.com/vim-scripts/javacomplete.git
-[submodule "vim-colorschemes"]
-	path = vim-files/.vim/bundle/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes.git
+	branch = master
 [submodule "honza-vim-snippets"]
 	path = vim-files/.vim/bundle/honza-vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+	branch = master
+[submodule "commentary"]
+	path = vim-files/.vim/bundle/commentary
+	url = https://github.com/tpope/vim-commentary.git
+	branch = master
+[submodule "syntastic"]
+	path = vim-files/.vim/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+	branch = master
+[submodule "delimitMate"]
+	path = vim-files/.vim/bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+	branch = master
 [submodule "luochen1990-rainbow"]
 	path = vim-files/.vim/bundle/luochen1990-rainbow
 	url = https://github.com/luochen1990/rainbow.git
+	branch = master
+[submodule "bufexplorer"]
+	path = vim-files/.vim/bundle/bufexplorer.zip
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
+	branch = master
+[submodule "TagHighlight"]
+	path = vim-files/.vim/bundle/TagHighlight
+	url = https://github.com/magic-dot-files/TagHighlight.git
+	branch = master
+[submodule "vim-powerline"]
+	path = vim-files/.vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+	branch = develop
+[submodule "javacomplete"]
+	path = vim-files/.vim/bundle/javacomplete
+	url = https://github.com/vim-scripts/javacomplete.git
+	branch = master
+[submodule "vim-colorschemes"]
+	path = vim-files/.vim/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+	branch = master
