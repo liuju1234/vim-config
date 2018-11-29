@@ -41,11 +41,40 @@ git submodule add -b master --name delimitMate https://github.com/Raimondi/delim
 git submodule add -b master --name luochen1990-rainbow https://github.com/luochen1990/rainbow.git .vim/bundle/luochen1990-rainbow
 git submodule add -b master --name bufexplorer https://github.com/vim-scripts/bufexplorer.zip.git .vim/bundle/bufexplorer.zip
 git submodule add -b master --name TagHighlight https://github.com/magic-dot-files/TagHighlight.git .vim/bundle/TagHighlight
-git submodule add -b develop --name vim-powerline https://github.com/Lokaltog/vim-powerline.git .vim/bundle/vim-powerline
 git submodule add -b master --name javacomplete https://github.com/vim-scripts/javacomplete.git .vim/bundle/javacomplete
 git submodule add -b master --name ctrlp-vim https://github.com/kien/ctrlp.vim.git .vim/bundle/ctrlp-vim
 
-git submodule add -b master --name vim-colorschemes https://github.com/flazz/vim-colorschemes.git  .vim/bundle/vim-colorschemes
+#git submodule add -b master --name vim-colorschemes https://github.com/flazz/vim-colorschemes.git  .vim/bundle/vim-colorschemes
 
+git submodule add -b master --name vim-fugitive https://github.com/tpope/vim-fugitive.git .vim/bundle/vim-fugitive
+
+git submodule add -b master --name vim-airline https://github.com/vim-airline/vim-airline.git .vim/bundle/vim-airline
+git submodule add -b master --name vim-airline-themes https://github.com/vim-airline/vim-airline-themes.git .vim/bundle/vim-airline-themes
+
+git submodule add -b master --name vim-colors-solarized https://github.com/altercation/vim-colors-solarized.git .vim/bundle/vim-colors-solarized
 # add config to .vimrc
+
+
+# download fonts for airline
+cd ../
+mkdir fonts
+cd fonts
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+wget https://github.com/powerline/fonts/raw/master/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline.otf
+wget https://github.com/powerline/fonts/raw/master/DroidSansMonoDotted/Droid%20Sans%20Mono%20Dotted%20for%20Powerline.ttf
+wget https://github.com/powerline/fonts/raw/master/DroidSansMonoSlashed/Droid%20Sans%20Mono%20Slashed%20for%20Powerline.ttf
+wget https://github.com/powerline/fonts/raw/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
+wget https://github.com/powerline/fonts/raw/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20Oblique%20for%20Powerline.ttf
+wget https://github.com/powerline/fonts/raw/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20Bold%20for%20Powerline.ttf
+wget https://github.com/powerline/fonts/raw/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20Bold%20Oblique%20for%20Powerline.ttf
+
+mkdir ~/.local/share/fonts/
+cp *.ttf *.otf ~/.local/share/fonts/
+fc-cache -vf ~/.local/share/fonts/
+
+# Install the fontconfig file. 
+# For newer versions of fontconfig the config path is ~/.config/fontconfig/conf.d/, 
+# for older versions it’s ~/.fonts.conf.d/:
+cp 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 

@@ -47,19 +47,27 @@
 	path = vim-files/.vim/bundle/TagHighlight
 	url = https://github.com/magic-dot-files/TagHighlight.git
 	branch = master
-[submodule "vim-powerline"]
-	path = vim-files/.vim/bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
-	branch = develop
 [submodule "javacomplete"]
 	path = vim-files/.vim/bundle/javacomplete
 	url = https://github.com/vim-scripts/javacomplete.git
 	branch = master
-[submodule "vim-colorschemes"]
-	path = vim-files/.vim/bundle/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes.git
-	branch = master
 [submodule "ctrlp-vim"]
 	path = vim-files/.vim/bundle/ctrlp-vim
 	url = https://github.com/kien/ctrlp.vim.git
+	branch = master
+[submodule "vim-fugitive"]
+	path = vim-files/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+	branch = master
+[submodule "vim-airline"]
+	path = vim-files/.vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+	branch = master
+[submodule "vim-airline-themes"]
+	path = vim-files/.vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+	branch = master
+[submodule "vim-colors-solarized"]
+	path = vim-files/.vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
 	branch = master

@@ -9,3 +9,12 @@ git submodule update --init --recursive
 
 ln -s `pwd`/.vim ~/.vim
 
+
+mkdir ~/.local/share/fonts/
+cp fonts/*.ttf fonts/*.otf ~/.local/share/fonts/
+fc-cache -vf ~/.local/share/fonts/
+
+# Install the fontconfig file. 
+# For newer versions of fontconfig the config path is ~/.config/fontconfig/conf.d/, 
+# for older versions it’s ~/.fonts.conf.d/:
+cp fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
