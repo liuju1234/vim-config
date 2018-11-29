@@ -59,3 +59,7 @@
 	path = vim-files/.vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
 	branch = master
+[submodule "ctrlp-vim"]
+	path = vim-files/.vim/bundle/ctrlp-vim
+	url = https://github.com/kien/ctrlp.vim.git
+	branch = master

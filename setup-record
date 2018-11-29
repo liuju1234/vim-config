@@ -43,8 +43,9 @@ git submodule add -b master --name bufexplorer https://github.com/vim-scripts/bu
 git submodule add -b master --name TagHighlight https://github.com/magic-dot-files/TagHighlight.git .vim/bundle/TagHighlight
 git submodule add -b develop --name vim-powerline https://github.com/Lokaltog/vim-powerline.git .vim/bundle/vim-powerline
 git submodule add -b master --name javacomplete https://github.com/vim-scripts/javacomplete.git .vim/bundle/javacomplete
+git submodule add -b master --name ctrlp-vim https://github.com/kien/ctrlp.vim.git .vim/bundle/ctrlp-vim
 
 git submodule add -b master --name vim-colorschemes https://github.com/flazz/vim-colorschemes.git  .vim/bundle/vim-colorschemes
 
-
+# add config to .vimrc
 

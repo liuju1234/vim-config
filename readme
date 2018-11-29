@@ -1,0 +1,16 @@
+dependence:
+1. vim must support python or python3
+2. ctags must be install
+3. cscope must be install
+
+istall:
+reference to file install
+
+usage:
+F2 search file in tree
+F3 switch focus from file and tree
+
+F8 on/off tag list
+
+
+
