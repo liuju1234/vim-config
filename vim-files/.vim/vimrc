@@ -15,7 +15,7 @@ set encoding=utf-8
 set number
 
 " 取消换行
-set nowrap
+set wrap
 
 " 显示光标当前位置
 set ruler
