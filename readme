@@ -1,16 +1,22 @@
 dependence:
-1. vim must support python or python3
-2. ctags must be install
-3. cscope must be install
+  1. vim must support python or python3
+  2. ctags must be install
+  3. cscope must be install
 
 istall:
-reference to file install
+  reference to file 'install'
 
 usage:
-F2 search file in tree
-F3 switch focus from file and tree
+  F2 search file in tree
+  F3 switch focus from file and tree
+  Ctrl-N on/off dir list tree
 
-F8 on/off tag list
+  F8 on/off tag list
 
+about tags:
+  use 'tools/generate_vim_tags' to generate tags for android code
+  to use it, you can copy file 'tools/generate_vim_tags' to a direcoty in $PATH, example for: '~/bin'
+  after run 'generate_vim_tags', it will display a command such as follow to add tags in vim
+  ':source /home2/liujk2/work/source/qcomsdm450_o_dev/.vim_tags/conf.vim'
 
 

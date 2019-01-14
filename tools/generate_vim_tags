@@ -1,0 +1,94 @@
+#!/bin/bash
+
+#cd ~/work/source
+
+SOURCE_ROOT=$1
+if [[ "$SOURCE_ROOT" == "" ]] ; then
+  echo "not give source dir!"
+  exit 1
+fi
+if [[ ! -d "$SOURCE_ROOT" ]] ; then
+  echo "dir $SOURCE_ROOT not exist!"
+  exit 1
+fi
+SOURCE_ROOT=`cd $SOURCE_ROOT; pwd`
+SOURCE_DIR=`basename $SOURCE_ROOT`
+
+OUT_DIR=${SOURCE_ROOT}/.vim_tags
+OUT_CTAGS_FILE=${OUT_DIR}/main.ctags
+OUT_VIM_CONFIG=${OUT_DIR}/conf.vim
+CFG_DIRS_LIST=${OUT_DIR}/dirs.list
+OUT_CSCOPE_LIST=${OUT_DIR}/cscope_files.list
+echo "generate ctags and cscopes for $SOURCE_ROOT -> ${OUT_DIR}/"
+
+mkdir -p $OUT_DIR
+
+TEMP_CTAGS_LIST=`mktemp -q /tmp/generate_vim_ctags_list_XXXXX`
+TEMP_CSCOPE_LIST=`mktemp -q /tmp/generate_vim_cscope_list_XXXXX`
+
+#echo "$TEMP_CTAGS_LIST $TEMP_CSCOPE_LIST "
+
+if [ ! -f $CFG_DIRS_LIST ] ; then
+  echo "no dirs config file '$CFG_DIRS_LIST', create it!"
+  echo "
+# this is an config file for generate tags
+# these are directories in android source to scan
+bionic
+libcore
+frameworks
+packages/apps/Settings
+packages/apps/Launcher3
+packages/providers/MediaProvider
+packages/providers/TelephonyProvider
+packages/providers/ContactsProvider
+packages/services/Telephony
+system/core
+system/vold
+" >$CFG_DIRS_LIST
+fi
+
+echo "read from dirs config file '$CFG_DIRS_LIST'..."
+while read line
+do
+  if [ x"$line" = x ] ; then
+    continue
+  fi
+  if [ x"${line:0:1}" = x"#" ] ; then
+    continue
+  fi
+  path=$line
+  if [ -d "$SOURCE_ROOT/LINUX/android" ] ; then
+    path=LINUX/android/$path
+  fi
+  if [ ! -d "$SOURCE_ROOT/$path" ] ; then
+    echo "no dir $SOURCE_ROOT/$path, ignore!"
+    continue
+  fi
+  echo "$SOURCE_ROOT/$path" >> $TEMP_CTAGS_LIST
+  echo "searching... in $SOURCE_ROOT/$path"
+  find $SOURCE_ROOT/$path -name .repo -prune -o -name .git -prune -o -name out -prune -o -type f \( -name '*.java' -o -name '*.aidl' -o -name '*.c' -o -name '*.cc' -o -name '*.cpp' -o -name '*.h' -o -name '*.hpp' \) -exec echo \"{}\" \; >>$TEMP_CSCOPE_LIST
+done < $CFG_DIRS_LIST
+
+RUN_CTAGS_CMD="ctags -L $TEMP_CTAGS_LIST -R --fields=+iaS --extra=+q -f $OUT_CTAGS_FILE"
+echo $RUN_CTAGS_CMD
+
+$RUN_CTAGS_CMD
+
+cp $TEMP_CTAGS_LIST ${OUT_CTAGS_FILE}_list
+rm $TEMP_CTAGS_LIST
+
+cd ${OUT_DIR}
+RUN_CSCOPE_CMD="cscope -bkq -i $TEMP_CSCOPE_LIST"
+echo " in dir `pwd` exec '$RUN_CSCOPE_CMD'"
+
+$RUN_CSCOPE_CMD
+
+cp $TEMP_CSCOPE_LIST $OUT_CSCOPE_LIST
+rm $TEMP_CSCOPE_LIST
+
+echo >$OUT_VIM_CONFIG
+echo ":set tags=$OUT_CTAGS_FILE" >>$OUT_VIM_CONFIG
+echo ":cs add $OUT_DIR/cscope.out" >>$OUT_VIM_CONFIG
+echo "=============================="
+echo "follow commands in vim to add:"
+echo ":source $OUT_VIM_CONFIG"

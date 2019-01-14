@@ -85,7 +85,7 @@ let g:NERDTreeIndicatorMapCustom = {
 
 nmap <F2> :NERDTreeTabsFind<CR>
 
-nmap <F3> ::NERDTreeFocusToggle<CR>
+nmap <F3> :NERDTreeFocusToggle<CR>
 
 " TagBar 自动生成参数和方法  
 " Then the F8 key will toggle the Tagbar window.  
@@ -131,7 +131,7 @@ let g:rainbow_conf = {
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
 autocmd FileType java inoremap <expr><CR> pumvisible()?"\<C-Y>":"<CR>"
-autocmd FileType java inoremap <buffer> . .<C-X><C-O><C-P>
+autocmd FileType java inoremap <buffer> .. .<C-X><C-O><C-P>
 
 " for vim-airline
 let g:airline_powerline_fonts = 1
@@ -141,5 +141,6 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-let g:airline_theme='simple'
+" let g:airline_theme='simple'
+let g:airline_theme='base16'
 
