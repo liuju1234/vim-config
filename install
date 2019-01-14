@@ -7,7 +7,15 @@ git submodule update --init --recursive
 # on ubuntu 'apt-get install exuberant-ctags'
 # on mac os, first install homebrew, and then 'brew install ctags'
 
-ln -s `pwd`/.vim ~/.vim
+cd <vim-config-dir>/
+
+# backup vim config
+mv ~/.vim ~/.vim.bak && mv ~/.vimrc ~/.vimrc.bak
+# or delete vim config
+rm -rf ~/.vim && rm ~/.vimrc
+
+# apply new vim config
+ln -s `pwd`/vim-files/.vim ~/.vim
 
 
 mkdir ~/.local/share/fonts/
