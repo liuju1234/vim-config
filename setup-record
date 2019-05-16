@@ -1,8 +1,9 @@
 # compile vim
+sudo apt-get install libacl1-dev libpython3.5-dev
 git clone https://github.com/vim/vim.git
 cd vim
 git checkout -b 7.4.2367 v7.4.2367
-./configure --prefix=<HOME>/program/vim --enable-pythoninterp=dynamic --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/
+./configure --prefix=<HOME>/program/vim --enable-pythoninterp=dynamic --with-python-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/
 make
 make install
 cd -
